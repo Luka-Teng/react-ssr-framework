@@ -1,6 +1,6 @@
 import BaseRoute from './BaseRoute'
 import Home from '@/pages/home'
-import Test from '@/pages/test'
+import Template from '@/pages/template'
 import React from 'react'
 
 export const routes = [
@@ -10,8 +10,8 @@ export const routes = [
     exact: true
   },
   {
-    path: '/test',
-    component: Test,
+    path: '/template',
+    component: Template,
     exact: true
   }
 ]

@@ -12,7 +12,8 @@ const asyncRedux = store => next => action => {
   // 判断action.type是否存在在list中
   const actionName = actionList.find(item => item === action.type)
   if (actionName) {
-    actionEvents[actionName](action, store.dispatch)
+    // 直接返回，dispatch进入异步后会直接返回该方法的运行结果，一般为promise
+    return actionEvents[actionName](action, store.dispatch)
   } else {
     next(action)
   }
