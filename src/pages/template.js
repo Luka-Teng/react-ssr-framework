@@ -19,7 +19,6 @@ export default class Test extends Component {
   render () {
     return (
       <div>
-
         <div>{JSON.stringify(this.props)}</div>
       </div>
     )

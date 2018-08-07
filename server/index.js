@@ -10,6 +10,7 @@ require('asset-require-hook')({
   limit: 10000,
   name: 'static/media/[name].[hash:8].[ext]'
 })
+// 支持babel编译
 require('babel-register')
 require('babel-polyfill')
 // 和前端webpack的alias进行合并

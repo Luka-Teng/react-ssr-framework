@@ -40,8 +40,11 @@ module.exports = async (ctx, next) => {
     )
   )
 
+  // 如果页面发生重定向，这跳转该页面
+  if (context.url) {
+    ctx.redirect(context.url)
+  }
   const initState = store.getState()
-  console.log(initState)
 
   ctx.body = layout(frontComponents, initState)
 }
