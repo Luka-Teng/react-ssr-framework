@@ -1,8 +1,7 @@
 // 处理css，less
 require('css-modules-require-hook/preset')
 require('css-modules-require-hook')({
-  extensions: '.less',
-  processorOpts: {parser: require('postcss-less').parse}
+  extensions: '.less'
 })
 // 处理图片
 require('asset-require-hook')({
